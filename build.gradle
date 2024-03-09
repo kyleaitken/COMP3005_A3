@@ -1,0 +1,18 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+    jcenter()
+}
+
+run {
+    standardInput = System.in
+}
+
+ 
+mainClassName = 'run.Run'  // Update with your actual main class
+
+
+dependencies {
+    implementation 'org.postgresql:postgresql:42.6.1'
+}
