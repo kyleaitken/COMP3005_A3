@@ -62,3 +62,7 @@ Run:
 ```bash
 java -cp build/classes/java/main:lib/postgresql-42.6.1.jar run.Run
 ```
+
+# Demonstration Video Link:
+
+https://youtu.be/P06k6kHEuno
