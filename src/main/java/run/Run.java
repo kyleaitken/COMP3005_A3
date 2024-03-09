@@ -40,6 +40,7 @@ public class Run {
                     break;
 
                 case 2:
+                    System.out.println("Add a student to the database:");
                     System.out.println("Enter First Name:");
                     String fName = scanner.nextLine();
                     System.out.println("Enter Last Name:");
@@ -53,7 +54,8 @@ public class Run {
                     break;
 
                 case 3:
-                    System.out.println("Enter Student ID to Update:");
+                    System.out.println("Update a student's email:");
+                    System.out.println("Enter Student ID:");
                     int id = scanner.nextInt();
                     scanner.nextLine();
                     System.out.println("Enter New Email:");
@@ -63,7 +65,8 @@ public class Run {
                     break;
 
                 case 4:
-                    System.out.println("Enter Student ID to Delete:");
+                    System.out.println("Delete a student from the database:");
+                    System.out.println("Enter Student ID:");
                     int deleteId = scanner.nextInt();
                      scanner.nextLine();
 
@@ -83,6 +86,8 @@ public class Run {
 
     // getAllStudents() retrieves all student tuples from the database
     private static void getAllStudents() {
+        System.out.println("Retrieving all students from the database:");
+
         String query = "SELECT * FROM students";
         try (
             PreparedStatement preparedStatement = connection.prepareStatement(query);
@@ -106,12 +111,14 @@ public class Run {
     }
 
     private static void printMenu() {
+        System.out.println();
         System.out.println("Select database operation:");
         System.out.println("1 - Get all students");
         System.out.println("2 - Add student");
         System.out.println("3 - Update student email");
         System.out.println("4 - Delete student");
         System.out.println("0 - Exit");
+        System.out.println();
     }
 
     // addStudent(fName, lName, email, dateString) adds a new student to the database
